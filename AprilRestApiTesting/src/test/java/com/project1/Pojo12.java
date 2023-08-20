@@ -1,7 +1,7 @@
-package pojo;
+package com.project1;
+
 import java.util.HashMap;
 import java.util.Map;
-
 //import javax.annotation.Generated;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -12,49 +12,33 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-"accountno",
-"departmentno",
+"name",
 "salary",
-"pincode",
-"userid",
+"age",
 "id"
 })
 //@Generated("jsonschema2pojo")
-public class UserpojoNew {
+public class Pojo12 {
 
-@JsonProperty("accountno")
-private String accountno;
-@JsonProperty("departmentno")
-private String departmentno;
+@JsonProperty("name")
+private String name;
 @JsonProperty("salary")
 private String salary;
-@JsonProperty("pincode")
-private String pincode;
-@JsonProperty("userid")
-private String userid;
+@JsonProperty("age")
+private String age;
 @JsonProperty("id")
 private String id;
 @JsonIgnore
 private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-@JsonProperty("accountno")
-public String getAccountno() {
-return accountno;
+@JsonProperty("name")
+public String getName() {
+return name;
 }
 
-@JsonProperty("accountno")
-public void setAccountno(String accountno) {
-this.accountno = accountno;
-}
-
-@JsonProperty("departmentno")
-public String getDepartmentno() {
-return departmentno;
-}
-
-@JsonProperty("departmentno")
-public void setDepartmentno(String departmentno) {
-this.departmentno = departmentno;
+@JsonProperty("name")
+public void setName(String name) {
+this.name = name;
 }
 
 @JsonProperty("salary")
@@ -67,24 +51,14 @@ public void setSalary(String salary) {
 this.salary = salary;
 }
 
-@JsonProperty("pincode")
-public String getPincode() {
-return pincode;
+@JsonProperty("age")
+public String getAge() {
+return age;
 }
 
-@JsonProperty("pincode")
-public void setPincode(String pincode) {
-this.pincode = pincode;
-}
-
-@JsonProperty("userid")
-public String getUserid() {
-return userid;
-}
-
-@JsonProperty("userid")
-public void setUserid(String userid) {
-this.userid = userid;
+@JsonProperty("age")
+public void setAge(String age) {
+this.age = age;
 }
 
 @JsonProperty("id")
@@ -107,7 +81,6 @@ public void setAdditionalProperty(String name, Object value) {
 this.additionalProperties.put(name, value);
 }
 
+
+
 }
-
-
-

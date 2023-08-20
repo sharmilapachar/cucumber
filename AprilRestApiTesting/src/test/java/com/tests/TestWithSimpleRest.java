@@ -9,7 +9,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class TestWithSimpleRest {
-@Test(enabled=false)
+@Test(enabled=true)
 public static void getFlightdata() {
 	RestAssured
 	.given()

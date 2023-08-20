@@ -2,8 +2,8 @@ package com.tests.CRUDWithTekarchApi;
 
 	import java.io.IOException;
 
-
-	//import org.testng.annotations.BeforeClass;
+import org.testng.Assert;
+//import org.testng.annotations.BeforeClass;
 	import org.testng.annotations.Test;
 	import io.restassured.RestAssured;
 	import io.restassured.http.Header;
@@ -34,11 +34,16 @@ package com.tests.CRUDWithTekarchApi;
 					.when().post(" https://us-central1-qa01-tekarch-accmanager.cloudfunctions.net/addData");
 			//response.then().log().all();
 			response.then().statusCode(201);
+		
+				String h=	response.header("header");
+			System.out.println("value of header : "+h);
 			String status = response.jsonPath().get("status");
 		
 			System.out.println("STATUS ="+status);
-		
+			System.out.println(response.body().asString());
+		//response.body()
 			//AssertJUnit.assertEquals(status, "success");
+			Assert.assertEquals(status, "success");
 		}
 
 	}

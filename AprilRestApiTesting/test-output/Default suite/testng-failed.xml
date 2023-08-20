@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pojo.GetUserWithPojo">
+      <class name="com.tests.CRUDWithTekarchApi.GetUser">
         <methods>
-          <include name="getUserDataWithPojo"/>
-          <include name="setupRequestSpecification"/>
+          <include name="updateUserData"/>
+          <include name="getUserData"/>
         </methods>
-      </class> <!-- pojo.GetUserWithPojo -->
+      </class> <!-- com.tests.CRUDWithTekarchApi.GetUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

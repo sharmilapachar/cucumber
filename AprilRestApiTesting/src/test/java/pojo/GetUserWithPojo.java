@@ -2,15 +2,12 @@ package pojo;
 
 import java.io.IOException;
 
-import org.testng.annotations.BeforeClass;
 //import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
 import io.restassured.http.Header;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 
 
 public class GetUserWithPojo {
@@ -39,7 +36,7 @@ public class GetUserWithPojo {
 			.log().all()
 				.when().get(" https://us-central1-qa01-tekarch-accmanager.cloudfunctions.net/getdata");
 		response.then().log().cookies();
-		UserpojoNew[] listOfUsers=response.as(UserpojoNew[].class);
+		UserpojoNew[] listOfUsers=response.as(UserpojoNew[].class);// DESERILIZATION
 		System.out.println("records="+listOfUsers.length);
 		System.out.println(listOfUsers[0].getSalary());
 		response.then().statusCode(200);

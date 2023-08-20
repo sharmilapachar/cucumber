@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.testng.AssertJUnit;
 //import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.response.Response;
@@ -31,15 +32,16 @@ public class AddUserPojo {
 	public static void addUserDataWithPojo() throws IOException {
 		if(token1==null) {
 			loginToTekarchApi();}
-		UserpojoNew obj =new UserpojoNew();
+		Userpojo obj =new Userpojo();
+		
 		obj.setAccountno("TA-SP11111");
 		obj.setDepartmentno("1");
 		obj.setPincode("654321");
 		obj.setSalary("655");
-
+//String json=MAPPER.
 		Header header = new Header("token",token1);
 		Response response = RestAssured.given().contentType("application/json").header(header)
-				.body(obj)
+				.body(obj)// SERIALIZATION
 				.log().all()
 				.when().post(" https://us-central1-qa01-tekarch-accmanager.cloudfunctions.net/addData");
 		response.then().log().all();
