@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-06T16:33:23 EDT" name="Default suite" finished-at="2023-04-06T16:33:39 EDT" duration-ms="15642">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runners.RunnerFile@5c5eefef]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2023-04-06T16:33:23 EDT" name="Default test" finished-at="2023-04-06T16:33:39 EDT" duration-ms="15642">
+      <class name="com.runners.RunnerFile">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runners.RunnerFile@5c5eefef]" started-at="2023-04-06T16:33:23 EDT" name="setUpClass" finished-at="2023-04-06T16:33:23 EDT" duration-ms="162" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@35a0e495]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runners.RunnerFile@5c5eefef]" started-at="2023-04-06T16:33:23 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-06T16:33:32 EDT" duration-ms="8865" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["login with username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runners.RunnerFile@5c5eefef]" started-at="2023-04-06T16:33:32 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-06T16:33:39 EDT" duration-ms="6376" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Selenium12] but found [Selenium]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Selenium12] but found [Selenium]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at com.step.FirebasesStepDefinition.page_title_should_be(FirebasesStepDefinition.java:50)
+at ✽.page title should be "Selenium12"(file:///C:/Users/prave/eclipse-workspace/CucumberProject/src/test/resources/features/First.Features.feature:17)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runners.RunnerFile@5c5eefef]" started-at="2023-04-06T16:33:39 EDT" name="tearDownClass" finished-at="2023-04-06T16:33:39 EDT" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.runners.RunnerFile -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
